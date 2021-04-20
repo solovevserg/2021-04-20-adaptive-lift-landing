@@ -1,0 +1,83 @@
+:root {
+    --clr-bg: #12161a;
+    --clr-panel: #191c22;
+    --clr-button: #282c37;
+    --clr-primary: #2B9EF2;
+    --clr-text: white;
+    
+    --container-width: 1200px;
+    --indent: 50px;
+    --font: 'Arial', sans-serif;
+}
+
+html, body {
+    margin: 0;
+}
+
+
+/* Layout */
+
+.container {
+    max-width: var(--container-width);
+    margin: auto;
+    padding: 0 var(--indent);
+}
+
+/* Global */
+
+body {
+    background: var(--clr-bg);
+    font-family: var(--font);
+    color: var(--clr-text);
+}
+
+/* Top Nav */
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    background: var(--clr-panel);
+    width: 100%;
+}
+
+.top-nav menu {
+    display: flex;
+}
+
+.mobile .top-nav li:not(:first-child) {
+    display: none;
+}
+
+/* Welcome section */
+
+.carousel {
+    /* padding: var(--indent); */
+}
+
+.carousel__control {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.carousel__control__item:not(:first-child) {
+    color: rgb(145, 145, 145);
+}
+
+.carousel__content {
+    display: flex;
+}
+
+.carousel__content .description {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+    .carousel__content {
+        flex-direction: column;
+    }
+}
